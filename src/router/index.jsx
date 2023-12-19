@@ -1,10 +1,10 @@
 import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
-import { LoginPage } from '../modules/LoginPage';
-import { RegistrationPage } from '../modules/RegistrationPage';
-import { MainPage } from '../modules/MainPage';
-import { HomePage } from '../modules/HomePage';
+import { LoginPage } from '../pages/LoginPage';
+import { RegistrationPage } from '../pages/RegistrationPage';
+import { MainPage } from '../pages/MainPage';
+import { HomePage } from '../pages/HomePage';
 import { Header } from '../components/Header';
-import { ShelterPage } from '../components/ShelterPage';
+import { ShelterPage } from '../pages/ShelterPage';
 
 export default () => {
   return (

@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Фронтенд клієнт для проєкту "Знайди прихисток"
+Сервіс для допомоги з пошуком та наданням прихистку для біженців
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Як запустити проєкт
 
-## Available Scripts
+У папці проєкту запустити команду:
 
-In the project directory, you can run:
+### npm start
 
-### `npm start`
+Перейти за адресою [http://localhost:3000](http://localhost:3000) що би переглянути його в браузері.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Функціонал сервісу
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Головна сторінка з посиланням на вхід або реєстрацію
+- Сторінка входу /login
+- Сторінка реєстрації /registration
+- Сторінка користувача /home. Для тих хто здає є форма опису житла, для тих хто шукаю - форма пошуку та список по результатам
+- Сторінка житла /shelter/:shelterId детальна сторінка житла де власник може бачити повідомлення, та той хто шукає може лишати повідомлення
 
-### `npm test`
+## Структура файлів
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Проєкт написаний за допомогою бібліотеки React та команди React Create App [https://create-react-app.dev/](https://create-react-app.dev/)
+- папка public містить index.html файл яка слугує основою для запуску проекту
+- папка api де знаходятися конфігурація та функціонал для зʼєднання з серверною частиною
+- папка components містить компоненти такі як Catalogue, Header, ShelterForm
+- папка pages містить сторінки HomePage, LoginPage, MainPage, RegistrationPage, ShelterPage
+- папка router містить опис посилань та відповідає за показ сторінок відповідно посиланню
+- папка utils містить допоміжну функцію для декодування інформації з токену про користувача
+- файл App.js слугує точкою входу для клієнта
